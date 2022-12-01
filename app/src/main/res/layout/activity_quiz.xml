@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizActivity">
+
+
+    <TextView
+        android:id="@+id/recognize_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textColor="#0000aa"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@id/quiz_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="0.75" />
+
+    <TextView
+        android:id="@+id/quiz_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@id/draw_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recognize_txt"
+        app:layout_constraintVertical_weight="1.25" />
+
+    <view
+        class="com.example.x3033074.final_progjissen.AnswerCanvas"
+        android:id="@+id/draw_view"
+        android:background="#ffffff"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/quiz_txt"
+        app:layout_constraintBottom_toTopOf="@id/recognize_but"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_weight="4"/>
+
+    <Button
+        android:id="@+id/recognize_but"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="認識"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/draw_view"
+        app:layout_constraintBottom_toTopOf="@id/clear_but"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_weight="1"/>
+
+    <Button
+        android:id="@+id/clear_but"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="消しゴム"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/recognize_but"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/answer_but"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintHorizontal_weight="1"/>
+
+    <Button
+        android:id="@+id/answer_but"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="決定"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/recognize_but"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/clear_but"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintHorizontal_weight="1"/>
+
+</android.support.constraint.ConstraintLayout>
